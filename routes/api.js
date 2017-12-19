@@ -6,8 +6,13 @@ router.get('/hitcat',function(req,res){
         res.send({type:'GET'});
 });
 router.post('/hitcat',function(req,res){
+        console.log(req.body);
+        res.send({
+            type:'POST',
+            name:req.body.name,
+            rank:req.body.rank
 
-        res.send({type:'POST'});
+                    });
 });
 
 router.put('/hitcat/:id',function(req,res){
